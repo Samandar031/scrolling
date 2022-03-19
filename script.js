@@ -190,32 +190,62 @@ operation.removeEventListener('mouseenter', function () {
 //     });
 //   }, 2000);
 // };
-let link = document.querySelector('.nav__link');
+// let link = document.querySelector('.nav__link');
 
-let rgb = function (max, min) {
-  let r = Math.trunc(Math.random() * (max - min) + min);
-  let g = Math.trunc(Math.random() * (max - min) + min);
-  let b = Math.trunc(Math.random() * (max - min) + min);
-  return [r, g, b];
-};
+// let rgb = function (max, min) {
+//   let r = Math.trunc(Math.random() * (max - min) + min);
+//   let g = Math.trunc(Math.random() * (max - min) + min);
+//   let b = Math.trunc(Math.random() * (max - min) + min);
+//   return [r, g, b];
+// };
 
-link.addEventListener('click', e => {
-  e.preventDefault();
-  let a = rgb(0, 255);
-  link.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
-});
+// link.addEventListener('click', e => {
+//   e.preventDefault();
+//   let a = rgb(0, 255);
+//   link.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
+// });
 
-let link1 = document.querySelector('.nav__links');
-link1.addEventListener('click', e => {
-  e.preventDefault();
-  let a = rgb(0, 255);
-  link1.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
-});
+// let link1 = document.querySelector('.nav__links');
+// link1.addEventListener('click', e => {
+//   e.preventDefault();
+//   let a = rgb(0, 255);
+//   link1.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
+// });
 
-let link2 = document.querySelector('body');
+// let link2 = document.querySelector('body');
 
-link2.addEventListener('click', e => {
-  e.preventDefault();
-  let a = rgb(0, 255);
-  link2.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
-});
+// link2.addEventListener('click', e => {
+//   e.preventDefault();
+//   let a = rgb(0, 255);
+//   link2.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
+// });
+
+// birinchi usul xato usul
+
+// let link = document.querySelectorAll('.link__link');
+// link.forEach(el => {
+//   el.addEventListener("click", function(e){
+//     e.preventDefault()
+//     const href = this.getAttribute("href")
+//     if(!el.classList.contains("nav__link--btn"){
+//       document.querySelector(href).scrollIntoView({behavior: "smooth"})
+//     });
+//   });
+// });
+
+// let links = document.querySelectorAll('.nav__links');
+
+// links.addEventListener('click', function (el) {
+//   el.preventDefault();
+
+//   if (el.target.classList.contains('nav__link')) {
+//     const href = el.target.getAttribute('href');
+//     document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+//   }
+// });
+
+// dom traversing
+
+let h1H = document.querySelector('h1');
+console.log(h1H.children);
+console.log(h1H.childNodes);
