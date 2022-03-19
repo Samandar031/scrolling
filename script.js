@@ -190,3 +190,32 @@ operation.removeEventListener('mouseenter', function () {
 //     });
 //   }, 2000);
 // };
+let link = document.querySelector('.nav__link');
+
+let rgb = function (max, min) {
+  let r = Math.trunc(Math.random() * (max - min) + min);
+  let g = Math.trunc(Math.random() * (max - min) + min);
+  let b = Math.trunc(Math.random() * (max - min) + min);
+  return [r, g, b];
+};
+
+link.addEventListener('click', e => {
+  e.preventDefault();
+  let a = rgb(0, 255);
+  link.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
+});
+
+let link1 = document.querySelector('.nav__links');
+link1.addEventListener('click', e => {
+  e.preventDefault();
+  let a = rgb(0, 255);
+  link1.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
+});
+
+let link2 = document.querySelector('body');
+
+link2.addEventListener('click', e => {
+  e.preventDefault();
+  let a = rgb(0, 255);
+  link2.style.backgroundColor = `rgb(${a[0]}, ${a[1]},${a[2]})`;
+});
