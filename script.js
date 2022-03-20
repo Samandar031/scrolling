@@ -249,3 +249,7 @@ operation.removeEventListener('mouseenter', function () {
 let h1H = document.querySelector('h1');
 console.log(h1H.children);
 console.log(h1H.childNodes);
+
+let h1 = document.querySelector('h1');
+console.log(h1H.children);
+console.log(h1H.childNodes);
