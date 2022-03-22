@@ -246,10 +246,58 @@ operation.removeEventListener('mouseenter', function () {
 
 // dom traversing
 
-let h1H = document.querySelector('h1');
-console.log(h1H.children);
-console.log(h1H.childNodes);
+// let h1H = document.querySelector('h1');
+// console.log(h1H.children);
+// console.log(h1H.childNodes);
 
-let h1 = document.querySelector('h1');
-console.log(h1H.children);
-console.log(h1H.childNodes);
+// let h1 = document.querySelector('h1');
+// console.log(h1H.children);
+// console.log(h1H.childNodes);
+
+// oop
+
+const Samandar = function (name, age) {
+  this.name = name;
+  this.age = age;
+  // this.birth = function (year) {
+  //   console.log(2022 - year);
+  // };
+};
+
+let umid = new Samandar('Umid', 21);
+console.log(umid);
+let mamur = new Samandar('Mamur', 20);
+console.log(mamur);
+
+Samandar.prototype.birth = function (year) {
+  console.log(2022 - year);
+};
+
+umid.birth(1996);
+mamur.birth(2002);
+
+let begzod = new Samandar('begzod', 22);
+console.log(begzod);
+begzod.birth(2000);
+
+let azizullo = new Samandar('Azizullo', 18);
+console.log(azizullo);
+azizullo.birth(2004);
+
+let jafar = new Samandar('Jafar', 21);
+console.log(jafar);
+jafar.birth(2001);
+
+let jonibek = new Samandar('Jonibek', 20);
+console.log(jonibek);
+jonibek.birth(2002);
+
+let fazliddin = new Samandar('Fazliddin', 21);
+console.log(fazliddin);
+fazliddin.birth(2001);
+
+let sardor = new Samandar('Sardor', 20);
+console.log(sardor);
+
+console.log(sardor.hasOwnProperty('birth'));
+//o'ziniki emas
