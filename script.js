@@ -382,57 +382,100 @@
 
 // nihol.sum(2001);
 
-class Bank {
-  #pin;
-  constructor(egasi, age, pin) {
-    this.egasi = egasi;
-    this.age = age;
-    this.#pin = pin;
+// class Bank {
+//   #pin;
+//   static pul = 10000;
+//   constructor(egasi, age, pin) {
+//     this.egasi = egasi;
+//     this.age = age;
+//     this.#pin = pin;
 
-    this.til = navigator.language;
-    this.utkazmalar = [];
+//     this.til = navigator.language;
+//     this.utkazmalar = [];
+//   }
+
+//   get utkazmalarniOlish() {
+//     return this.utkazmalar.push();
+//   }
+
+// set utkazmalarOlishni(val) {
+//   this.utkazmalar.push(val);
+// }
+
+// set utkazmalarQoshish(val) {
+//   this.utkazmalar.push(-val);
+// }
+
+// get hammasi() {
+//   this.utkazmalar.filter(() => {
+//     return val > 0;
+//   });
+// }
+
+// get qarz() {
+//   this.hammasi.reduce(val => {
+
+//   });
+// }
+
+// set #pinniOzgartirish(val) {
+//   this.#pin = val;
+// }
+
+// set uzgar(val) {
+//   this.#pinniOzgartirish = val;
+// }
+
+// get pinOlish() {
+//   return this.#pin;
+// }
+// }
+
+// let ism = 'samandar';
+// let yosh = 21;
+// let parol = 1111;
+
+// let samandar = new Bank(`${ism}`, `${yosh}`, `${parol}`);
+// console.log(samandar);
+
+// samandar.utkazmalarOlishni = 400;
+// samandar.utkazmalarQoshish = 400;
+// samandar.utkazmalarOlishni = 4400;
+// samandar.utkazmalarQoshish = 300;
+
+// samandar.uzgar = 1234;
+// console.log(samandar);
+
+class Phone {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
   }
 
-  get utkazmalarniOlish() {
-    return this.utkazmalar.push();
+  get olgin() {
+    return [this.name, this.price];
+  }
+  //bu xato
+
+  get olginNomi() {
+    return this.name;
   }
 
-  set utkazmalarOlishni(val) {
-    this.utkazmalar.push(val);
+  get olginPrice() {
+    return this.price;
   }
 
-  set utkazmalarQoshish(val) {
-    this.utkazmalar.push(-val);
+  set uzgartr(narxi) {
+    this.price = narxi;
   }
 
-  get hammasi() {
-    this.utkazmalar.filter();
+  static developer() {
+    console.log('Samandar Qodirqulov');
   }
-
-  // set #pinniOzgartirish(val) {
-  //   this.#pin = val;
-  // }
-
-  // set uzgar(val) {
-  //   this.#pinniOzgartirish = val;
-  // }
-
-  // get pinOlish() {
-  //   return this.#pin;
-  // }
 }
 
-let ism = 'samandar';
-let yosh = 21;
-let parol = 1111;
+let samsung = new Phone('Samsaung', 2000);
+samsung.uzgartr = 10000;
+console.log(samsung);
 
-let samandar = new Bank(`${ism}`, `${yosh}`, `${parol}`);
-console.log(samandar);
-
-samandar.utkazmalarOlishni = 400;
-samandar.utkazmalarQoshish = 400;
-samandar.utkazmalarOlishni = 4400;
-samandar.utkazmalarQoshish = 300;
-
-samandar.uzgar = 1234;
-console.log(samandar);
+Phone.developer();
