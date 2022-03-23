@@ -3,32 +3,32 @@
 ///////////////////////////////////////
 // Modal window
 
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.btn--close-modal');
-const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+// const modal = document.querySelector('.modal');
+// const overlay = document.querySelector('.overlay');
+// const btnCloseModal = document.querySelector('.btn--close-modal');
+// const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 
-const openModal = function () {
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
+// const openModal = function () {
+//   modal.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+// };
 
-const closeModal = function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
+// const closeModal = function () {
+//   modal.classList.add('hidden');
+//   overlay.classList.add('hidden');
+// };
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener('click', openModal);
+// for (let i = 0; i < btnsOpenModal.length; i++)
+//   btnsOpenModal[i].addEventListener('click', openModal);
 
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
+// btnCloseModal.addEventListener('click', closeModal);
+// overlay.addEventListener('click', closeModal);
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  }
-});
+// document.addEventListener('keydown', function (e) {
+//   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+//     closeModal();
+//   }
+// });
 
 // Selectings
 // const headerTitle = document.querySelector('.header__title');
@@ -130,57 +130,57 @@ document.addEventListener('keydown', function (e) {
 // // O'rniga bunday qilamiz
 // logo.classList.add('umid');
 
-let btnScroll = document.querySelector('.btn--scroll-to');
-let sectionScroll = document.querySelector('#section--1');
+// let btnScroll = document.querySelector('.btn--scroll-to');
+// let sectionScroll = document.querySelector('#section--1');
 
-btnScroll.addEventListener('click', function (e) {
-  // viewportga nisbatan barcha propertiylarni olish
-  const scroll = sectionScroll.getBoundingClientRect();
-  console.log(scroll);
-  console.log(e.target);
+// btnScroll.addEventListener('click', function (e) {
+//   // viewportga nisbatan barcha propertiylarni olish
+//   const scroll = sectionScroll.getBoundingClientRect();
+//   console.log(scroll);
+//   console.log(e.target);
 
-  console.log(
-    `websitaga x/y fa nisbatan oladi`,
-    window.pageXOffset,
-    window.pageYOffset
-  );
+//   console.log(
+//     `websitaga x/y fa nisbatan oladi`,
+//     window.pageXOffset,
+//     window.pageYOffset
+//   );
 
-  // viewportni vidth bilan height ni oladi
-  // scroll qilingan qism (tapada qolib ketgan qismi)
-  console.log(
-    `x/y viewportga nisbatan:`,
-    document.documentElement.clientWidth,
-    document.documentElement.clientHeight
-  );
+// viewportni vidth bilan height ni oladi
+// scroll qilingan qism (tapada qolib ketgan qismi)
+// console.log(
+//   `x/y viewportga nisbatan:`,
+//   document.documentElement.clientWidth,
+//   document.documentElement.clientHeight
+// );
 
-  // window.scrollTo(scroll.left, scroll.top + window.pageYOffset);
-  // window.scrollTo({
-  //   left: scroll.left,
-  //   top: scroll.top + window.pageYOffset,
-  //   behavior: 'smooth',
-  // });
+// window.scrollTo(scroll.left, scroll.top + window.pageYOffset);
+// window.scrollTo({
+//   left: scroll.left,
+//   top: scroll.top + window.pageYOffset,
+//   behavior: 'smooth',
+// });
 
-  sectionScroll.scrollIntoView({ behavior: 'smooth' });
-});
+//   sectionScroll.scrollIntoView({ behavior: 'smooth' });
+// });
 
-let operation = document.querySelector('.operations__tab--2');
-let footer = document.querySelector('.footer');
+// let operation = document.querySelector('.operations__tab--2');
+// let footer = document.querySelector('.footer');
 
-operation.addEventListener('click', function () {
-  const ali = footer.getBoundingClientRect();
+// operation.addEventListener('click', function () {
+//   const ali = footer.getBoundingClientRect();
 
-  // window.scrollTo(ali.left, ali.bottom + window.pageYOffset); 1-usul
-  document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
-  2 - usul;
-});
+//   // window.scrollTo(ali.left, ali.bottom + window.pageYOffset); 1-usul
+//   document.querySelector('body').scrollIntoView({ behavior: 'smooth' });
+//   2 - usul;
+// });
 
-operation.addEventListener('mouseenter', function () {
-  operation.style.backgroundColor = 'red';
-});
+// operation.addEventListener('mouseenter', function () {
+//   operation.style.backgroundColor = 'red';
+// });
 
-operation.removeEventListener('mouseenter', function () {
-  operation.style.backgroundColor = 'red';
-});
+// operation.removeEventListener('mouseenter', function () {
+//   operation.style.backgroundColor = 'red';
+// });
 
 // let func = function () {
 //   operation.style.backgroundColor = 'red';
@@ -244,6 +244,19 @@ operation.removeEventListener('mouseenter', function () {
 //   }
 // });
 
+// Tugri usul
+// let links = document.querySelector('.nav__links');
+
+// links.addEventListener('click', function (e) {
+//   e.preventDefault();
+
+//   if (e.target.classList.contains('nav__link')) {
+//     const href = e.target.getAttribute('href');
+//     console.log(href);
+//     document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+//   }
+// });
+
 // dom traversing
 
 // let h1H = document.querySelector('h1');
@@ -256,48 +269,170 @@ operation.removeEventListener('mouseenter', function () {
 
 // oop
 
-const Samandar = function (name, age) {
-  this.name = name;
-  this.age = age;
-  // this.birth = function (year) {
-  //   console.log(2022 - year);
-  // };
-};
+// const Samandar = function (name, age) {
+//   this.name = name;
+//   this.age = age;
+//   // this.birth = function (year) {
+//   //   console.log(2022 - year);
+//   // };
+// };
 
-let umid = new Samandar('Umid', 21);
-console.log(umid);
-let mamur = new Samandar('Mamur', 20);
-console.log(mamur);
+// let umid = new Samandar('Umid', 21);
+// console.log(umid);
+// let mamur = new Samandar('Mamur', 20);
+// console.log(mamur);
 
-Samandar.prototype.birth = function (year) {
-  console.log(2022 - year);
-};
+// Samandar.prototype.birth = function (year) {
+//   console.log(2022 - year);
+// };
 
-umid.birth(1996);
-mamur.birth(2002);
+// umid.birth(1996);
+// mamur.birth(2002);
 
-let begzod = new Samandar('begzod', 22);
-console.log(begzod);
-begzod.birth(2000);
+// let begzod = new Samandar('begzod', 22);
+// console.log(begzod);
+// begzod.birth(2000);
 
-let azizullo = new Samandar('Azizullo', 18);
-console.log(azizullo);
-azizullo.birth(2004);
+// let azizullo = new Samandar('Azizullo', 18);
+// console.log(azizullo);
+// azizullo.birth(2004);
 
-let jafar = new Samandar('Jafar', 21);
-console.log(jafar);
-jafar.birth(2001);
+// let jafar = new Samandar('Jafar', 21);
+// console.log(jafar);
+// jafar.birth(2001);
 
-let jonibek = new Samandar('Jonibek', 20);
-console.log(jonibek);
-jonibek.birth(2002);
+// let jonibek = new Samandar('Jonibek', 20);
+// console.log(jonibek);
+// jonibek.birth(2002);
 
-let fazliddin = new Samandar('Fazliddin', 21);
-console.log(fazliddin);
-fazliddin.birth(2001);
+// let fazliddin = new Samandar('Fazliddin', 21);
+// console.log(fazliddin);
+// fazliddin.birth(2001);
 
-let sardor = new Samandar('Sardor', 20);
-console.log(sardor);
+// let sardor = new Samandar('Sardor', 20);
+// console.log(sardor);
 
-console.log(sardor.hasOwnProperty('birth'));
-//o'ziniki emas
+// console.log(sardor.hasOwnProperty('birth'));
+// //o'ziniki emas
+// console.log(sardor.hasOwnProperty('name'));
+// //o'ziniki
+// console.log(umid.__proto__);
+// console.log(Samandar.prototype);
+// let alex = 2230;
+// console.log(Samandar.prototype.isPrototypeOf(alex));
+
+// let samandar = new Samandar('Samandar', 21);
+// console.log(Samandar);
+
+// let Car = function (nomi, narxi, rangi) {
+//   this.nomi = nomi;
+//   this.narxi = narxi;
+//   this.rang = rangi;
+// };
+
+// let jiguli = new Car('Jiguli', ' 1ming $', 'qizil');
+
+// Car.prototype.joyi = function (location) {
+//   console.log(location);
+// };
+
+// let damas = new Car('Damas', '85min $', 'oq');
+// console.log(damas);
+// damas.joyi('Fargana');
+
+// let bugati = new Car('Bugati', '40 mln $', "ko'k qora");
+// console.log(bugati);
+// bugati.joyi('Italiya');
+
+// class Student {}
+// class decloration
+
+// const Student = class {};
+//class expression
+
+// class Car {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   barow(ism) {
+//     return 2022 - this.age;
+//   }
+// }
+
+// Car.prototype.facultet = function () {
+//   return 'mersedes';
+// };
+// let umid = new Car('Umid', 26);
+// console.log(umid);
+
+// class Oqish {
+//   constructor(kurs, oquvchilar) {
+//     this.name = kurs;
+//     this.oquvchilar = oquvchilar;
+//   }
+
+//   sum(year) {
+//     return 2022 - year;
+//   }
+// }
+
+// let nihol = new Oqish('birinchi kurs', '85 ta');
+// console.log(nihol);
+
+// nihol.sum(2001);
+
+class Bank {
+  #pin;
+  constructor(egasi, age, pin) {
+    this.egasi = egasi;
+    this.age = age;
+    this.#pin = pin;
+
+    this.til = navigator.language;
+    this.utkazmalar = [];
+  }
+
+  get utkazmalarniOlish() {
+    return this.utkazmalar.push();
+  }
+
+  set utkazmalarOlishni(val) {
+    this.utkazmalar.push(val);
+  }
+
+  set utkazmalarQoshish(val) {
+    this.utkazmalar.push(-val);
+  }
+
+  get hammasi() {
+    this.utkazmalar.filter();
+  }
+
+  // set #pinniOzgartirish(val) {
+  //   this.#pin = val;
+  // }
+
+  // set uzgar(val) {
+  //   this.#pinniOzgartirish = val;
+  // }
+
+  // get pinOlish() {
+  //   return this.#pin;
+  // }
+}
+
+let ism = 'samandar';
+let yosh = 21;
+let parol = 1111;
+
+let samandar = new Bank(`${ism}`, `${yosh}`, `${parol}`);
+console.log(samandar);
+
+samandar.utkazmalarOlishni = 400;
+samandar.utkazmalarQoshish = 400;
+samandar.utkazmalarOlishni = 4400;
+samandar.utkazmalarQoshish = 300;
+
+samandar.uzgar = 1234;
+console.log(samandar);
