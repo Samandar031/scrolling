@@ -479,3 +479,16 @@ samsung.uzgartr = 10000;
 console.log(samsung);
 
 Phone.developer();
+
+const Ali = {
+  cac(name, price) {
+    this.name = name;
+    this.price = price;
+  },
+};
+
+let iphone = Object.create(Ali);
+iphone.name = 'Nokia';
+iphone.price = 1235;
+
+console.log(iphone);
