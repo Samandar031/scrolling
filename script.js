@@ -446,49 +446,155 @@
 // samandar.uzgar = 1234;
 // console.log(samandar);
 
-class Phone {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
+// class Phone {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//   }
 
-  get olgin() {
-    return [this.name, this.price];
-  }
-  //bu xato
+//   get olgin() {
+//     return [this.name, this.price];
+//   }
+//   //bu xato
 
-  get olginNomi() {
-    return this.name;
-  }
+//   get olginNomi() {
+//     return this.name;
+//   }
 
-  get olginPrice() {
-    return this.price;
-  }
+//   get olginPrice() {
+//     return this.price;
+//   }
 
-  set uzgartr(narxi) {
-    this.price = narxi;
-  }
+//   set uzgartr(narxi) {
+//     this.price = narxi;
+//   }
 
-  static developer() {
-    console.log('Samandar Qodirqulov');
-  }
-}
+//   static developer() {
+//     console.log('Samandar Qodirqulov');
+//   }
+// }
 
-let samsung = new Phone('Samsaung', 2000);
-samsung.uzgartr = 10000;
-console.log(samsung);
+// let samsung = new Phone('Samsaung', 2000);
+// samsung.uzgartr = 10000;
+// console.log(samsung);
 
-Phone.developer();
+// Phone.developer();
 
-const Ali = {
-  cac(name, price) {
-    this.name = name;
-    this.price = price;
-  },
+// const Ali = {
+//   cac(name, price) {
+//     this.name = name;
+//     this.price = price;
+//   },
+// };
+
+// let iphone = Object.create(Ali);
+// iphone.name = 'Nokia';
+// iphone.price = 1235;
+
+// console.log(iphone);
+
+// juma kungi dars
+
+// let arr = [1, 2, 3, 4, 5, 5];
+// arr.push(8);
+
+// Array.prototype.umid = function () {
+//   console.log('qalay');
+// };
+
+// Array.prototype.push = function () {
+//   console.log('push ishlamadi');
+// };
+
+// arr.push(6);
+
+// personal.prototype.hisobla = function () {
+//   return 2022 - this.yoshi;
+// };
+
+// const umid = new Personal('Umid', 2011);
+
+// 2-usul
+
+// class Car {
+//   constructor(ism, yosh) {
+//     this.ism = ism;
+//     this.yosh = yosh;
+//   }
+
+//   hisobla() {
+//     return 2022 - this.yosh;
+//   }
+// }
+
+// let umid = new Car('Umid', 26);
+// console.log(umid);
+
+// 3-usul
+
+// let me = {
+//   hisobla() {
+//     return 2022 - this.yosh;
+//   },
+//   boshla(ism, yosh) {
+//     this.ism = ism;
+//     this.yosh = yosh;
+//   },
+// };
+
+// let umid = Object.create(me);
+
+// umid.boshla('Samandar', 21);
+// console.log(umid);
+
+// const Person = function (ism, yosh) {
+//   this.ism = ism;
+//   this.yosh = yosh;
+// };
+
+// const Talaba = function (ism, yosh, facultet, stipendiya) {
+//   // this.ism = ism;
+//   // this.yosh = yosh;
+//   Person.call(this, ism, yosh);
+//   this.facultet = facultet;
+//   this.stipendiya = stipendiya;
+// };
+
+// Talaba.prototype.facultetTop = function(){
+//   return this.facultetTop
+// }
+
+// Person.prototype.yoshHisobla = function () {
+//   return 2022 - this.yosh;
+// };
+
+const Person = function (ism, yosh) {
+  this.ism = ism;
+  this.yosh = yosh;
 };
 
-let iphone = Object.create(Ali);
-iphone.name = 'Nokia';
-iphone.price = 1235;
+let Uqituvchi = function (ism, yosh, oyligi, tili) {
+  Person.call(this, ism, yosh);
+  this.oyligi = oyligi;
+  this.tili = tili;
+};
 
-console.log(iphone);
+Person.prototype.yoshiHisobla = function () {
+  return 2022 - this.yosh;
+};
+
+Uqituvchi.prototype.oylikHisobla = function () {
+  return (this.oyligi * 100) / 1200000;
+};
+
+let umid = new Uqituvchi('Umid', 26, 4000000, "o'zbek");
+console.log(umid);
+console.log(umid.oylikHisobla());
+
+let aziz = new Uqituvchi('Aziz', 20, 5000000, 'russia');
+console.log(aziz);
+console.log(aziz.oylikHisobla());
+
+let jamshid = new Person('Jamshid', 22);
+console.log(jamshid);
+console.log(jamshid.yoshiHisobla());
