@@ -568,33 +568,35 @@
 //   return 2022 - this.yosh;
 // };
 
-const Person = function (ism, yosh) {
-  this.ism = ism;
-  this.yosh = yosh;
-};
+// const Person = function (ism, yosh) {
+//   this.ism = ism;
+//   this.yosh = yosh;
+// };
 
-let Uqituvchi = function (ism, yosh, oyligi, tili) {
-  Person.call(this, ism, yosh);
-  this.oyligi = oyligi;
-  this.tili = tili;
-};
+// let Uqituvchi = function (ism, yosh, oyligi, tili) {
+//   Person.call(this, ism, yosh);
+//   this.oyligi = oyligi;
+//   this.tili = tili;
+// };
 
-Person.prototype.yoshiHisobla = function () {
-  return 2022 - this.yosh;
-};
+// Person.prototype.yoshiHisobla = function () {
+//   return 2022 - this.yosh;
+// };
 
-Uqituvchi.prototype.oylikHisobla = function () {
-  return (this.oyligi * 100) / 1200000;
-};
+// Uqituvchi.prototype.oylikHisobla = function () {
+//   return (this.oyligi * 100) / 1200000;
+// };
 
-let umid = new Uqituvchi('Umid', 26, 4000000, "o'zbek");
-console.log(umid);
-console.log(umid.oylikHisobla());
+// let umid = new Uqituvchi('Umid', 26, 4000000, "o'zbek");
+// console.log(umid);
+// console.log(umid.oylikHisobla());
 
-let aziz = new Uqituvchi('Aziz', 20, 5000000, 'russia');
-console.log(aziz);
-console.log(aziz.oylikHisobla());
+// let aziz = new Uqituvchi('Aziz', 20, 5000000, 'russia');
+// console.log(aziz);
+// console.log(aziz.oylikHisobla());
 
-let jamshid = new Person('Jamshid', 22);
-console.log(jamshid);
-console.log(jamshid.yoshiHisobla());
+// let jamshid = new Person('Jamshid', 22);
+// console.log(jamshid);
+// console.log(jamshid.yoshiHisobla());
+
+// Person.prototype = Object.create(Uqituvchi.prototype);
